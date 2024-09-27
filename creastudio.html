@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CréaPro Studio - Services de création et gestion de contenu digital</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4edde;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('https://mylittlebigweb.com/wp-content/uploads/2024/01/meilleur-logiciel-creation-site-web-jpg.webp');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Text Styling */
+        h1, h2 {
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section p {
+            color: white;
+        }
+
+        .hero-section a {
+            color: #FFA500;
+            text-decoration: underline;
+        }
+
+        /* Services Section */
+        .service-card {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover .service-overlay {
+            transform: translateY(0);
+        }
+
+        .service-overlay h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #f0f2f5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .service-overlay p {
+            font-size: 1rem;
+            color: #f0f2f5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Buttons */
+        .button-primary {
+            background-color: #FFA500;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button-primary:hover {
+            background-color: #ff8c00;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 50;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-scrolled {
+            background-color: #1F2937; /* Dark blue background */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FFA500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1F2937;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .service-card {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center p-6">
+            <h1 class="text-3xl font-bold text-white">CréaPro Studio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#services" class="text-white hover:text-yellow-400 transition duration-300">Services</a></li>
+                <li><a href="#about" class="text-white hover:text-yellow-400 transition duration-300">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container mx-auto text-center text-white z-10">
+                <h2 class="text-5xl font-bold mb-6 animate__animated animate__fadeInDown">Votre partenaire pour le contenu digital</h2>
+                <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-8 animate__animated animate__fadeInUp">
+                    Chez CréaPro Studio, nous transformons vos idées en réalités numériques captivantes. Contactez-nous à <a href="mailto:creaprostudio@yahoo.com" class="text-yellow-400 underline">creaprostudio@yahoo.com</a>
+                </p>
+            </div>
+        </section>
+        <!-- End of Hero Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">Nos Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <div class="service-card" style="background-image: url('https://kamelecom.fr/wp-content/uploads/2023/05/expertise-creation-logo10.jpg');">
+                        <div class="service-overlay">
+                            <h3>Création de logos</h3>
+                            <p>Des logos uniques et mémorables pour votre marque.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="service-card" style="background-image: url('https://www.codeur.com/blog/wp-content/uploads/2021/01/creation-site.jpg');">
+                        <div class="service-overlay">
+                            <h3>Conception de sites web</h3>
+                            <p>Des sites web modernes, réactifs et optimisés pour le SEO.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="service-card" style="background-image: url('https://www.tiz.fr/app/uploads/2017/11/video-entreprise-tiz-scaled.jpeg');">
+                        <div class="service-overlay">
+                            <h3>Création de vidéos</h3>
+                            <p>Des vidéos captivantes et professionnelles pour promouvoir votre marque.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="service-card" style="background-image: url('https://memoredaction.com/wp-content/uploads/2023/12/Correction-de-traduction.png');">
+                        <div class="service-overlay">
+                            <h3>Traduction et correction</h3>
+                            <p>Des services de traduction et correction de textes pour assurer la perfection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Services Section -->
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">À Propos de Nous</h2>
+                <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-6">
+                    Chez CréaPro Studio, notre mission est de fournir des services de création et gestion de contenu digital de haute qualité. 
+                    Notre équipe d'experts est dédiée à transformer vos idées en produits numériques qui captivent et engagent votre audience.
+                </p>
+                <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto">
+                    Que vous ayez besoin d'une création de logo, d'un site web, d'une vidéo promotionnelle, ou de services de traduction, 
+                    nous sommes là pour vous accompagner à chaque étape de votre projet.
+                </p>
+            </div>
+        </section>
+        <!-- End of About Section -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container mx-auto">
+            <p>&copy; 2024 CréaPro Studio. Tous droits réservés.</p>
+            <p>Contactez-nous à <a href="mailto:creaprostudio@yahoo.com" class="underline">creaprostudio@yahoo.com</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
